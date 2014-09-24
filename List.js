@@ -4,6 +4,7 @@
   var throttle = require('throttle');
 
   var List = function(data, el, itemTemplate) {
+    
     if (! data instanceof Arr) {
       throw new Error('data should be an instance of Arr');
     }
