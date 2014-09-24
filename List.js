@@ -1,4 +1,5 @@
 (function(rootScope) {
+  var Arr = require('arr');
   var mustache = require('minstache');
   var throttle = require('throttle');
 
