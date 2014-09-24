@@ -59,9 +59,9 @@
   };
 
   if (typeof module !== 'undefined') {
-    module.exports = throttle;
+    module.exports = List;
   } else {
-    rootScope.throttle = throttle;
+    rootScope.List = List;
   }
 
 })(this);
