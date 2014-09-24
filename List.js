@@ -1,9 +1,9 @@
 (function(rootScope) {
   var Arr = require('arr');
-  var mustache = require('minstache');
+  var minstache = require('minstache');
   var throttle = require('throttle');
 
-  var List = function(data, el, itemTamplate) {
+  var List = function(data, el, itemTemplate) {
     if (! data instanceof Arr) {
       throw new Error('data should be an instance of Arr');
     }
@@ -12,12 +12,12 @@
       throw new Error('el should be an instanceof of HTMLElement');
     }
    
-    if (typeof itemTamplate !== 'string') {
-      throw new Error('itemTamplate should be a string');
+    if (typeof itemTemplate !== 'string') {
+      throw new Error('itemTemplate should be a string');
     }
    
-    if (typeof mustache === 'undefined') {
-      throw new Error('mustache library is required');
+    if (typeof minstache === 'undefined') {
+      throw new Error('minstache library is required');
     }
    
     if (typeof throttle === 'undefined') {
@@ -26,7 +26,7 @@
    
     this.data = data;
     this.el = el;
-    this.itemTamplate = itemTamplate;
+    this.itemTemplate = itemTemplate;
    
     this.data.on('change', throttle(this.render.bind(this), 300));
     
@@ -51,7 +51,7 @@
    
       if (this.data.length > 0) {
         for (var i=0,len=this.data.length; i<len; i++) {
-          this.el.insertAdjacentHTML('beforeend', mustache(this.itemTamplate, this.data[i]));
+          this.el.insertAdjacentHTML('beforeend', minstache(this.itemTemplate, this.data[i]));
         }
       }
       
