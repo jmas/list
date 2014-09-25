@@ -7,7 +7,7 @@
   "dependencies": {
     "jmas/arr": "*",
     "jmas/throttle": "*",
-    "visionmedia/minstache": "*"
+    "jmas/minstache": "*"
   },
   "scripts": ["List.js"],
   "main": "List.js",
