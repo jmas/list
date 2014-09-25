@@ -5,7 +5,7 @@
   "version": "0.0.6",
   "keywords": ["list"],
   "dependencies": {
-    "jmas/arr": "*",
+    "jmas/arr": "0.1.0",
     "jmas/throttle": "*",
     "jmas/minstache": "1.2.2"
   },
