@@ -39,8 +39,10 @@
   List.prototype = {
     //
     clean: function() {
-      while (this.el.firstChild) {
-          this.el.removeChild(this.el.firstChild);
+      if (this.el.firstChild) { 
+        while (this.el.firstChild) {
+            this.el.removeChild(this.el.firstChild);
+        }
       }
    
       return this;
