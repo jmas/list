@@ -52,7 +52,11 @@
    
       if (this.data.length > 0) {
         for (var i=0,len=this.data.length; i<len; i++) {
-          this.el.insertAdjacentHTML('beforeend', minstache(this.itemTemplate, this.data[i]));
+
+          this.el.insertAdjacentHTML('beforeend', minstache(this.itemTemplate, {
+            index: i,
+            item: this.data[i]
+          }));
         }
       }
       
