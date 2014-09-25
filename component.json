@@ -7,7 +7,7 @@
   "dependencies": {
     "jmas/arr": "*",
     "jmas/throttle": "*",
-    "jmas/minstache": "*"
+    "jmas/minstache": "1.2.1"
   },
   "scripts": ["List.js"],
   "main": "List.js",
