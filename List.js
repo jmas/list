@@ -1,6 +1,6 @@
 (function(rootScope) {
   var Arr = require('arr');
-  var minstache = require('minstache');
+  var mustache = require('mustache.js');
   var throttle = require('throttle');
 
   var List = function(data, el, itemTemplate) {
@@ -17,8 +17,8 @@
       throw new Error('itemTemplate should be a string');
     }
    
-    if (typeof minstache === 'undefined') {
-      throw new Error('minstache library is required');
+    if (typeof mustache === 'undefined') {
+      throw new Error('mustache library is required');
     }
    
     if (typeof throttle === 'undefined') {
@@ -55,7 +55,7 @@
       if (this.data.length > 0) {
         for (var i=0,len=this.data.length; i<len; i++) {
 
-          this.el.insertAdjacentHTML('beforeend', minstache(this.itemTemplate, {
+          this.el.insertAdjacentHTML('beforeend', mustache.render(this.itemTemplate, {
             index: i,
             item: this.data[i]
           }));
