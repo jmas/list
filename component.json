@@ -2,12 +2,12 @@
   "name": "list",
   "repository": "jmas/list",
   "description": "List component that use Arr.js and throttle.js",
-  "version": "0.0.9",
+  "version": "0.0.13",
   "keywords": ["list"],
   "dependencies": {
     "jmas/arr": "0.1.3",
     "jmas/throttle": "*",
-    "jmas/minstache": "1.2.6"
+    "jmas/minstache": "*"
   },
   "scripts": ["List.js"],
   "main": "List.js",
