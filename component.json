@@ -5,9 +5,9 @@
   "version": "0.0.9",
   "keywords": ["list"],
   "dependencies": {
-    "jmas/arr": "0.1.0",
+    "jmas/arr": "0.1.4",
     "jmas/throttle": "*",
-    "jmas/minstache": "1.2.3"
+    "jmas/mustache.js": "*"
   },
   "scripts": ["List.js"],
   "main": "List.js",
