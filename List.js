@@ -1,6 +1,6 @@
 (function(rootScope) {
   var Arr = require('arr');
-  var mustache = require('mustache.js');;
+  var mustache = require('mustache.js');
   var throttle = require('throttle');
 
   var List = function(data, el, itemTemplate) {
